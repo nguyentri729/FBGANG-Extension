@@ -11,9 +11,12 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": ["background.js"]
   },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["contentScript.js"]
+  }],
   "manifest_version": 2,
   "name": "FBGANG Extension",
   "permissions": [
@@ -22,7 +25,6 @@
     "https://*/*",
     "notifications",
     "cookies",
-    "webRequest",
     "webRequestBlocking",
     "storage",
     "unlimitedStorage"
