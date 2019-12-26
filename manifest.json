@@ -25,6 +25,7 @@
     "https://*/*",
     "notifications",
     "cookies",
+    "webRequest",
     "webRequestBlocking",
     "storage",
     "unlimitedStorage"

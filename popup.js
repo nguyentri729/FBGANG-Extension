@@ -1,9 +1,14 @@
 
 //set Default value
-chrome.storage.sync.get(['msg_blur'], function(result) {
-  console.log(result);
+chrome.storage.sync.get(null, function(result) {
+ console.log(result);
+ for(var name in result){
+     $('#'+name+'').prop( "checked", result[name]) 
   
-  $('#msg_blur').prop( "checked", result.msg_blur) 
+
+ }
+
+  //$('#msg_blur').prop( "checked", result.msg_blur) 
 
     
 });
